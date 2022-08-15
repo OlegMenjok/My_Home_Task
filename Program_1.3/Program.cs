@@ -1,12 +1,10 @@
-﻿const double e = 2.71828182846;
-
-Console.WriteLine("Enter your birthday year");
-int year = Convert.ToInt32(Console.ReadLine());
-double eps = e / year;
-
-
-for (int i = 1; i < eps; i++)
+﻿Console.WriteLine("Enter your birthday year");
+var year = Convert.ToInt32(Console.ReadLine());
+double eps = 1 / year;
+Console.ReadLine();
+double sum = 0;
+for (double i = 1; i < eps; i++)
 {
-    //double y = 1 / (i * (eps + 1));
-    Console.WriteLine(i);
+    sum = 1 / (i * (i + 1));
 }
+Console.WriteLine("Sum of range: " + sum);
