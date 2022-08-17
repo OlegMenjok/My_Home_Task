@@ -5,18 +5,37 @@ string user = "User";
 string comp = "Computer";
 Random rndComp = new Random();
 do
-    {
-            Console.WriteLine("Rule: stone > scissors, scissors > paper, paper > stone");
-            Console.WriteLine("Stone = 1, scissors = 2, paper = 3");
+{
+    Precondition();
+    Game();
+}
+while(Console.ReadKey().Key != ConsoleKey.Q);
 
-            Console.WriteLine("Please tab Enter when you induce with rules");
-            while (Console.ReadKey().Key != ConsoleKey.Enter) { }
-            try
-            {
+void Precondition()
+{
+    Console.WriteLine("Rule: stone > scissors, scissors > paper, paper > stone");
+    Console.WriteLine("Stone = 1, scissors = 2, paper = 3");
+
+    Console.WriteLine("Please tab <w> when you induce with rules");
+    while (Console.ReadKey().Key != ConsoleKey.W)
+    {
+    }
+
+    Console.WriteLine();
+    Console.WriteLine("     ***        ****      **     **    ** ** **  ");
+    Console.WriteLine("   **         **    **    ** * * **    **        ");
+    Console.WriteLine("  **   ***    ** ** **    **  *  **    ** **     ");
+    Console.WriteLine("   **   *     **    **    **     **    **        ");
+    Console.WriteLine("     ***      **    **    **     **    ** ** **  ");
+}
+void Game()
+    {
+        try
+        {
             Console.WriteLine("\n\nPlease choose figure");
             int userchoose = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("You choose figure " + userchoose);
-            
+
             if (userchoose != 1 && userchoose != 2 && userchoose != 3)
             {
                 Console.WriteLine("Error, put correct number 1,2 or 3");
@@ -76,8 +95,7 @@ do
         }
         finally
         {
-            Console.WriteLine(
-                "If you want continue click any button, but if you  go out press Home in your keyboard ");
-            Console.WriteLine("\r\n\n");
+            Console.WriteLine("If you want continue click any button, but if you  go out press <Q> in your keyboard ");
+            Console.WriteLine("=====================================================================================");
         }
-}while(Console.ReadKey().Key != ConsoleKey.Home);
+    }
