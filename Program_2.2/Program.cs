@@ -4,7 +4,7 @@
             Console.WriteLine("Choose the figure in this list:" +
                               "Circle = 1, Triangle = 2");
             int userChoice = Convert.ToInt32(Console.ReadLine());
-            if (userChoice != 1 && userChoice != 2)
+            if (userChoice != 1 && userChoice != 2 && userChoice != 3)
             {
                 Console.WriteLine("Error, put correct number 1 or 2");
             }
@@ -18,33 +18,73 @@
                 {
                     Console.WriteLine("Enter positive(>0) number, please");
                 }
-
-                const double Pi = 3.14;
-                double squareCircle = Pi * (Math.Pow(radius, 2));
+                double squareCircle = Math.PI * (Math.Pow(radius, 2));
                 Console.WriteLine("Square of circle is : " + squareCircle);
             }
 
             //Triangle
+          
         if (userChoice == 2)
         {
-            Console.WriteLine("Enter first side");
+           
+            Console.Write("Enter first side: ");
             float firstSide = Convert.ToSingle(Console.ReadLine());
-            if (firstSide < 0)
-            {
-                Console.WriteLine("Enter positive(>0) number, please");
-            }
-
-            Console.WriteLine("Enter second side");
+            checkFirstSide();
+            Console.Write("Enter second side: ");
             float secondSide = Convert.ToSingle(Console.ReadLine());
-            if (secondSide < 0)
-            {
-                Console.WriteLine("Enter positive(>0) number, please");
-            }
+            checkSecondSide();
+            Console.Write("Enter third side: ");
+            float thirdSide = Convert.ToSingle(Console.ReadLine());
+            checkThirdSide();
 
-            float squareTriangle = (firstSide + secondSide) / 2;
+            float p = (1 / 2)*(firstSide + secondSide + thirdSide);
+            double squareTriangle = Math.Sqrt(p*(p-firstSide)*(p - secondSide)*(p - thirdSide));
             Console.WriteLine("Square of triangle is :" + squareTriangle);
+            
+            void checkFirstSide()
+            {
+                if (firstSide < 0)
+                {
+                    Console.WriteLine("Enter positive(>0) number, please");
+                    
+                }
+                
+            }
+            void checkSecondSide()
+            {
+                if (secondSide < 0)
+                {
+                    Console.WriteLine("Enter positive(>0) number, please");
+                }
+            }
+            void checkThirdSide()
+            {
+                if (thirdSide < 0)
+                {
+                    Console.WriteLine("Enter positive(>0) number, please");
+                }
+            }
+        }
+
+        if (userChoice == 3)
+        {
+            Console.Write("Enter first side: ");
+            float firstSide = Convert.ToSingle(Console.ReadLine());
+
+            double s = Math.Pow(firstSide, 2);
+            Console.WriteLine("Square of quadrant is: "+ s);
+        }
+        if (userChoice == 4)
+        {
+            Console.Write("Enter first side: ");
+            float firstSide = Convert.ToSingle(Console.ReadLine());
+            Console.Write("Enter second side: ");
+            float secondSide = Convert.ToSingle(Console.ReadLine());
+            double s = firstSide * secondSide;
+            Console.WriteLine("Square of quadrant is: "+ s);
         }
         }
+        
         catch
         {
             Console.WriteLine("Exception, Check format");
@@ -52,7 +92,7 @@
         finally
         {
             Console.WriteLine(
-                "If you want continue click any button, but if you  go out press Home in your keyboard ");
-            Console.WriteLine("\r\n\n");
+                "If you want continue click any button, but if you  go out press <Q> in your keyboard ");
+            Console.WriteLine("\n");
         }
-}while(Console.ReadKey().Key != ConsoleKey.Home);
+}while(Console.ReadKey().Key != ConsoleKey.Q);
