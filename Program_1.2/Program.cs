@@ -1,4 +1,4 @@
-﻿Console.WriteLine("This program count a certain formula ");
+﻿Console.WriteLine("This program count a bookmakers margin ");
 Console.WriteLine("Author: Menok Oleh");
 
 Console.WriteLine("Enter first competitor name: ");

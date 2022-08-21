@@ -1,6 +1,9 @@
-﻿do{
+﻿//методи хотів зробити і перевірку щоб сторони не були менше 0
+do{
+
         try
         {
+            
             Console.WriteLine("Choose the figure in this list:" +
                               "Circle = 1, Triangle = 2");
             int userChoice = Convert.ToInt32(Console.ReadLine());
@@ -8,7 +11,7 @@
             {
                 Console.WriteLine("Error, put correct number 1 or 2");
             }
-
+    
             //Cicle
             if (userChoice == 1)
             {
@@ -36,7 +39,7 @@
             Console.Write("Enter third side: ");
             float thirdSide = Convert.ToSingle(Console.ReadLine());
             checkThirdSide();
-
+            
             float p = (1 / 2)*(firstSide + secondSide + thirdSide);
             double squareTriangle = Math.Sqrt(p*(p-firstSide)*(p - secondSide)*(p - thirdSide));
             Console.WriteLine("Square of triangle is :" + squareTriangle);
@@ -81,7 +84,7 @@
             Console.Write("Enter second side: ");
             float secondSide = Convert.ToSingle(Console.ReadLine());
             double s = firstSide * secondSide;
-            Console.WriteLine("Square of quadrant is: "+ s);
+            Console.WriteLine("Square of rectangle is: "+ s);
         }
         }
         
@@ -95,4 +98,12 @@
                 "If you want continue click any button, but if you  go out press <Q> in your keyboard ");
             Console.WriteLine("\n");
         }
+        void
+        void triangle(float firstSide, float secondSide, float thirdSide)
+        {
+            float p = (1 / 2)*(firstSide + secondSide + thirdSide);
+            double resultTriangle = Math.Sqrt(p*(p-firstSide)*(p - secondSide)*(p - thirdSide));
+            Console.WriteLine("Square of triangle is :" + resultTriangle);
+        }
+        
 }while(Console.ReadKey().Key != ConsoleKey.Q);

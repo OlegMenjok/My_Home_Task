@@ -1,4 +1,5 @@
 ﻿{
+    Console.WriteLine("This program output only primary counts");
     Console.Write("Enter enter primary range limit: ");
     uint primaryBorder = Convert.ToUInt32(Console.ReadLine());
         
