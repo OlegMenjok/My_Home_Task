@@ -3,5 +3,9 @@ Program_1.2  => Done
 Program_1.3  => Done
 Program_1.4  => Done
 
-Program_2.1  => need command regime
-Program_2.1  => need command regime
+Program_2.1  => Done (need command regime)
+Program_2.2  => Done (need command regime)
+Program_2.3  => Done (need command regime)
+Program_2.3  => Done (there are disadvantages that are described in the comments)
+
+Program_3.1  => not resolved

@@ -24,19 +24,15 @@ while (true)
             double kv = Math.Pow(2, i++);
             if (kv < finalBorder)
             {
-                
-               // Console.WriteLine(kv);
                 n = i-1;
-                //Console.WriteLine("n="+n);
-        
             }
         }
         double res = 0.0;
         Console.WriteLine("You won, congratulation!!!!!!");
         
         res = Math.Round(Math.Abs(100 * ((n - f) / n)), 0);
-        Console.WriteLine($"You score is: {res} points");
-        
+        Console.WriteLine($"You score = {res} points");
+        Console.WriteLine($"Number of failed attempts = {f}");
         break;
         
     }
@@ -45,13 +41,11 @@ while (true)
     {
         Console.WriteLine("More");
         f++;
-       // Console.WriteLine("f= "+f);
     }
     else if (user > comp)
     {
         Console.WriteLine("Less");
         f++;
-        //Console.WriteLine("f= "+f);
     }
 }
 
