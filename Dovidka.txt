@@ -3,4 +3,4 @@ Program_1.2  => Done
 Program_1.3  => Done
 Program_1.4  => Done
 
-Program_2.1  => need schedule
+Program_2.1  => need command regime
